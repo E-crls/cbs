@@ -184,7 +184,7 @@ def llm_generate_insight(analysis_type, forecast_values, business_type, location
 
     Poderia me dar um insight ou recomendação de qual ação devo tomar, com base nos meus problemas, objetivos e todo o contexto? claro e objetivo com até 200 caracteres, priorizando informações úteis e acionáveis.
     Por favor, me responda em 2 frases apenas."""
-    genai.configure(api_key="AIzaSyC11nmgdTcNgR2MUckvWDYQoo4ZMA4b228")
+    genai.configure(api_key="")
     model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content(prompt)
     resposta = response.text.replace("Resposta:", "").replace("\n", " ").replace("/", "").strip()
